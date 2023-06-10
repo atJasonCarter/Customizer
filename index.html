@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/theme-toggle.js"></script>
+
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="style.css" id="theme-style">
+    <link rel="stylesheet" href="controller.css">
+    <link rel="stylesheet" href="/sun-and-moon.css">
+    <link rel="stylesheet" href="/theme-toggle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;800&display=swap');
+      </style>
+</head>
+<body data-theme="light">
+    <button id="toggle-nav">Controls</button>
+    <nav class="controller" id="bb-controller">
+          <button class="navItem theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <mask class="moon" id="moon-mask">
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <circle cx="24" cy="10" r="6" fill="black" />
+                  </mask>
+                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                <g class="sun-beams" stroke="currentColor">
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+              </svg>
+        </button>
+        <div class="navItem color-container">
+            <p>Enter Brand color</p>
+            <input type="text" id="brand-color" class="color-input" placeholder="Enter hex color with '#'">
+            <button class="color-preview" onclick="updateColors()">➡︎</button>
+          </div>
+          <p>upload logo</p>
+          <input type="file" id="cobrand-upload" accept="image/*" style="max-width:150px;">
+         
+    </nav>
+
+    <div class="bb-container" id="bb-container">
+        
+        <button class="close"><img src="/bb-imgs/CloseButton.svg" alt=""></button>
+        <div class="offer-container">
+            <h1 class="bb-headline" id="bb-headline">
+                Sign Up
+                <span class="bb-headline span" id="bb-headline-span">
+                    and earn a $5 gift card for free
+                </span>
+            </h1> <!-- end headline -->
+
+            <div class="bb-input-container">
+                <label for="bb-email"></label>
+                <input class="bb-email" type="email" id="bb-email" name="bb-email" placeholder="you@email.com">
+                <button class="bb CTA primary-color innactive" id="bb-button"><div class="bb-CTA-Content"> <p id="bb-CTA-id"> Sign up or Sign in </p> <div class="rightArrow"></div></div> </button>
+            </div> <!-- end input container -->
+            <h4 class="bb-subheader" id="bb-subheader">
+                Join for free and claim a gift card of your choice. Never receive spam. <span class="bb-quicklink" id="bb-quicklink">Learn More</span>.
+            </h4> <!-- end subheader -->
+
+            <div class="bb-logo-container">
+                <div class="bb-logo-wrapper">
+                    <div class="bb-logo cobrand" >
+                        <img id="cobrand" alt="Upload your logo">
+                 </div>
+                 <div class="icon plus 16">
+                    <img src="/bb-imgs/plus.svg" alt="" srcset="">
+                  </div>
+                    <div class="bb-logo">
+                    <img src="/bb-imgs/logo.svg" alt="" srcset="">
+
+                </div>
+            </div>
+            <div class="bb-gift">
+                <img src="/bb-imgs/Gift with border.svg" alt="" srcset="" style="fill:var(--bb-text-full)">
+            </div>
+            </div> <!-- end logo container-->
+         </div> <!-- end offer container-->
+         <div class="bb-img-container">
+             <img src="/bb-imgs/solarcore1.png" alt="Image of a positive outcome">
+         </div>
+
+         <!-- texture -->
+         <img class="texture top"src="/bb-imgs/topbg-texture.svg" alt="" srcset="">
+         <img class="texture bottom"src="/bb-imgs/btmgb-texture.png" alt="" srcset="">
+    </div> <!-- end bb container div -->
+
+    <script src="/positioning.js"></script>
+    <script src="customizer.js"></script>
+</body>
+</html>

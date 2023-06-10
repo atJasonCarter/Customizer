@@ -1,0 +1,57 @@
+@import "style.css";
+@import "customizer.js";
+
+
+  .color-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-direction: column;
+  }
+
+  .color-preview {
+    width: 99%;
+    height: 20px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 0px 0px 2px 2px;
+    background-color: var(--bb-partner-primary);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color:black;
+    -webkit-text-stroke: blanchedalmond 1px;
+    position: relative;
+    margin-bottom: 4px;
+    top:-2px;
+    box-sizing: border-box;
+
+  }
+
+button#toggle-nav{
+    position: absolute;
+    top:0;
+    right:0;
+}
+  #bb-controller {
+    display: none;
+  }
+  
+  .show-nav#bb-controller {
+    display: flex;
+    flex-direction: column;
+    background: var(--bb-bg-0);
+    z-index: 99;
+    position: absolute;
+    top:24px;
+    right:0px;
+    justify-content: end;
+    align-items: flex-end;
+    padding:4px;
+    color: var(--bb-text-full);
+    font-size: 12px;
+
+  }
+  
+  .navItem{
+      border-bottom: 1px solid var(--bb-text-vlight);
+  }
