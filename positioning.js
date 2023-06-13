@@ -4,7 +4,41 @@ window.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("resize", function() {
       centerDiv();
     });
+
+      // Function to handle the element repositioning
+  function handleElementPosition() {
+    var viewportWidth = window.innerWidth;
+    var container = document.querySelector(".bb-container");
+    var imgContainer = document.querySelector(".bb-img-container");
+    var offerContainer = document.querySelector(".offer-container");
+    var inputContainer = document.querySelector(".bb-input-container");
+
+    if (viewportWidth <= 574) {
+      // Move the img element under the new parent container
+      offerContainer.appendChild(inputContainer);
+      inputContainer.appendChild(imgContainer);
+    } else {
+      // Move the img element back to its original position
+      container.appendChild(imgContainer);
+    }
+  }
+
+  // Call the function initially
+  handleElementPosition();
+
+  // Check the viewport width on window resize
+  window.addEventListener("resize", function() {
+    handleElementPosition();
   });
+  });
+
+
+
+
+
+
+
+
   
   function centerDiv() {
     const div = document.getElementById("bb-container");
