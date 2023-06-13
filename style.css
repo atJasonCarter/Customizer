@@ -354,7 +354,7 @@ cursor: pointer;
     }
 
     button.bb.CTA.innactive{
-        opacity: 1;
+        opacity: .5;
     }
     button.close{
         position: absolute;
@@ -446,19 +446,23 @@ cursor: pointer;
     }
     .bb-input-container{
         padding: 12px 12px;
-        box-sizing: content-box;
+        box-sizing: border-box;
         width: auto;
         gap: 4px;
+        width: 100%;
+        max-width: 100%;
     }
     .bb-img-container{
-        max-height: 160px;
-        height:160px;
         max-width: 100%;
         box-sizing: border-box;
+        order: -1;
+        aspect-ratio: 1.85;
     }
     .bb-img-container > img {
         object-fit:cover;
+
     }
+
 }
 /* very small phones */
 @media (max-width:374px) {
