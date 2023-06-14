@@ -1,3 +1,31 @@
+var launcherButton = document.getElementById("bb-launcher");
+var bbContainer = document.getElementById("bb-container");
+var closeButton = document.getElementById("close-bb");
+
+launcherButton.addEventListener("click", function() {
+  if (bbContainer.classList.contains("open")) {
+    bbContainer.classList.add("close");
+    bbContainer.classList.remove("open");
+    bbContainer.classList.remove("launch");
+  } else {
+    bbContainer.classList.remove("close")
+    bbContainer.classList.add("open");
+    bbContainer.classList.remove("launch");
+  }
+});
+
+closeButton.addEventListener("click", function() {
+
+    bbContainer.classList.add("close");
+    bbContainer.classList.remove("open");
+    bbContainer.classList.remove("launch");
+   // Animation duration
+});
+
+
+
+
+// center div, resize  and move image on resize
 window.addEventListener("DOMContentLoaded", function() {
     centerDiv();
   

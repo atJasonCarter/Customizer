@@ -1,3 +1,5 @@
+
+
 function updateColors() {
     var brandColor = document.getElementById("brand-color").value;
   
@@ -115,6 +117,10 @@ function updateColors() {
     return [r, g, b];
   }
   
+
+
+
+
 
 //   toggle nav bar
 var toggleNavButton = document.getElementById("toggle-nav");
