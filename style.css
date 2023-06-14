@@ -249,11 +249,7 @@ body{
     55%{rotate: 0deg;}
 }
 
-.bb-gift:hover{
-transform: scale(1.05) translateY(-2px);
-transition: all .2s ease-in;
-cursor: pointer;
-}
+
 
     img.texture{
         position: absolute;
@@ -511,14 +507,18 @@ left:-.5px;
 border-radius: 3px;
 }
 .gift{
-    -webkit-mask: url(/bb-imgs/gift-v3.svg) no-repeat center;
-    mask: url(/bb-imgs/gift-v3.svg) no-repeat center;
+    -webkit-mask: url(./bb-imgs/gift-v3.svg) no-repeat center;
+    mask: url(./bb-imgs/gift-v3.svg) no-repeat center;
     background-color:var(--bb-button-text);
     width: 20px;
     height: 18px;
     animation: boxShake 10s 10s infinite;
     transform-origin: bottom;
-
+}
+.gift:hover{
+    transform: scale(1.05) translateY(-2px);
+    transition: all .2s ease-in;
+    cursor: pointer;
 }
 
 /* responsive */
