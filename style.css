@@ -280,7 +280,11 @@ body{
         background-size:8px 8px;
     }
 
-
+/* controller */
+.navItem.positioner{
+    
+}
+/* end conteroller */
 
 /* all text */
 
@@ -515,7 +519,7 @@ border-radius: 3px;
     animation: boxShake 10s 10s infinite;
     transform-origin: bottom;
 }
-.gift:hover{
+.launcher:hover{
     transform: scale(1.05) translateY(-2px);
     transition: all .2s ease-in;
     cursor: pointer;
@@ -567,3 +571,4 @@ border-radius: 3px;
         min-width: 200px;
     }
 }
+
